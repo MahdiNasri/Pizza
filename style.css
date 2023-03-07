@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Jua');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFCF0;
+    background-image: url(images/background.png);
+    background-attachment: fixed;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    font-family: 'Permanent Marker', sans-serif;
+    text-align: center;
+    font-size: 3.4rem;
+    color: #0d89db;
+}
+
+
+#logo-img {
+    width: 45px;
+}
+
+
+.grid-container {
+    font-family: 'Jua', Bahnschrift, sans-serif;
+    display: grid;
+    grid-template-columns: 850px 420px;
+    grid-template-rows: repeat(6, 130px);
+}
+
+.pizza-container {
+    grid-row: span 4;
+}
+
+.bill-container {
+    grid-row: span 2;
+}
+
+.toppings-container, .crust-container {
+    grid-row: span 3;
+}
+
+
+.toppings-container, .crust-container {
+    margin-left: 60px;
+    width: 360px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.toppings-head {
+    background: #0d89db;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.toppings-genres {
+    text-align: center;
+    display: flex;
+}
+
+.toppings-genre {
+    width: 50%;
+    padding: 5px;
+    background: #eee;
+    cursor: pointer;
+}
+
+.toppings-genre:hover {
+    background: #ccc;
+}
+
+.toppings-genre.active {
+    background: #0d89db;
+    color: #fff
+}
+
+.toppings-body {
+    position: relative;
+    height: calc(100% - 73px);
+}
+
+.toppings-body-non, .toppings-body-veg {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+}
+
+.toppings-body>.active-genre {
+    display: block;
+}
+
+.topping {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topping img {
+    width: 40px;
+}
+
+.pizza-container {
+    text-align: center;
+}
+
+.pizza-title {
+    font-size: 27px;
+}
+
+.pizza-image {
+    position: relative;
+}
+
+.topping-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.topping-image.yes {
+    display: block;
+}
+
+/* BILL */
+
+.bill-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bill-extras {
+    font-size: 22px;
+}
+
+.cheese {
+    margin-left: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cheese .checkmark {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #FFB97B;
+    transition: .5s ease-in-out;
+}
+
+.cheese .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    transition: .5s;
+}
+
+
+
+.cheese .checkmark:after {
+	transition: 5s;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 1px;
+    border: solid #fff;
+    border-width: 0 2px 3px 0;
+    transition: transform .5s ease-in-out;
+}
+
+.bill-extras input {
+    position: absolute;
+    opacity: 0%;
+}
+
+select {
+    background: #0d89db;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Jua'
+}
+
+.bill {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bill-list {
+    font-size: 16.32px;
+    list-style: none;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    width: 40%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.bill-list>li {
+    display: flex;
+    justify-content: space-between
+}
+
+.bill-list>li#grand-total {
+    padding-top: 5px;
+    border-top: 2px solid #ccc;
+}
+
+#buy-now {
+    padding: .80px 16px;
+    border-radius: 3px;
+    font-size: 2rem;
+    cursor: pointer;
+    background: #0d89db;
+    color: #fff;
+    transition: all .25s ease-in;
+    box-shadow: 0 0 30px rgba(2, 180, 79, 0.667);
+}
+
+#buy-now:hover {
+    box-shadow: 0 0 10px rgba(196, 9, 9, 0.6);
+    transform: scale(1.2)
+}
+
+#t1{
+    width: 300px;
+    height: 300px;
+    border-radius: 90px;
+}
+footer {
+    
+    background-color:#F5DEB3;
+    opacity : 85%;
+    height: 100px;
+    width: 100%;
+    font-family: 'Permanent Marker', sans-serif;
+    text-align: center;
+    font-size: 3.4rem;
+    color: #0d89db;
+
+}

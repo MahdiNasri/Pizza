@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order your cosmic pizza!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" sizes="192x192">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+
+    <header>C<img src="images/logo.png" id="logo-img">smic Pizzas</header>
+
+    <div class="grid-container">
+        <!-- THE PIZZA -->
+        <div class="grid-child pizza-container">
+            <div class="pizza-title">CUSTOMIZE YOUR PIZZA!</div>
+            <div class="pizza-image">
+                <img src="images/margherita.png" id="the-pizza">
+                <img src="customise/peri-peri-chicken.png" class="topping-image" id="peri-peri-chicken">
+                <img src="customise/barbeque.png" class="topping-image" id="barbeque">
+                <img src="customise/chicken-sausage.png" class="topping-image" id="sausage">
+                <img src="customise/chicken-tikka.png" class="topping-image" id="chicken-tikka">
+                <img src="customise/grilled-chicken-rasher.png" class="topping-image" id="grilled-chicken-rasher">
+                <img src="customise/capsicum.png" class="topping-image" id="capsicum">
+                <img src="customise/mushroom.png" class="topping-image" id="mushroom">
+                <img src="customise/onion.png" class="topping-image" id="onion">
+                <img src="customise/paneer.png" class="topping-image" id="paneer">
+                <img src="customise/paparika.png" class="topping-image" id="paparika">
+                <img src="customise/jalapeno.png" class="topping-image" id="jalapeno">
+                <img src="customise/greenOlives.png" class="topping-image" id="green-olives">
+                <img src="customise/goldenCorn.png" class="topping-image" id="golden-corn">
+            </div>
+            <div class="pizza-caption">A classic delight loaded with extra 100% real mozzarella cheese.</div>
+        </div>
+        
+        <div class="grid-child toppings-container">
+            <div class="toppings-head">ADD TOPPINGS</div>
+            <div class="toppings-genres">
+                <div class="toppings-genre" >VEG</div>
+                <div class="toppings-genre" >NON VEG</div>
+            </div>
+            <div class="toppings-body">
+                <div class="toppings-body-veg toppings-body-child active-genre">
+                    <div class="topping" title="2TND">
+                        <img src="thumbnails/Mushroom.png" alt="" srcset="">
+                        <span id="c1">MUSHROOM</span>
+                    </div>
+                    <div  class="topping" title="1TND">
+                        <img src="thumbnails/Onion.png" alt="" srcset="">
+                        <span id="c2">ONION</span>
+                    </div>
+                    <div class="topping" title="5TND">
+                        <img src="thumbnails/Paneer.png" alt="" srcset="">
+                        <span id="c3">PANEER</span>
+                    </div>
+                    <div class="topping" title="2TND">
+                        <img src="thumbnails/Paparika.png" alt="" srcset="">
+                        <span id="c4">PAPARIKA</span>
+                    </div>
+                    <div class="topping" title="2TND">
+                        <img src="thumbnails/Jalapeno.png" alt="" srcset="">
+                        <span id="c5">JALAPENO</span>
+                    </div>
+                    <div class="topping" title="2TND">
+                        <img src="thumbnails/Olives.png" alt="" srcset="">
+                        <span id="c6">GREEN OLIVES</span>
+                    </div>
+                    <div class="topping" title="3TND">
+                        <img src="thumbnails/GoldenCorn.png" alt="" srcset="">
+                        <span id="c7">GOLDEN CORN</span>
+                    </div>
+                    <div class="topping" title="2TND">
+                        <img src="thumbnails/Capsicum.png" alt="" srcset="">
+                        <span id="c8">CAPSICUM</span>
+                    </div>
+                </div>
+                <div class="toppings-body-non toppings-body-child">
+                    <div class="topping" title="5TND">
+                        <img src="thumbnails/PeriPeriChicken.png" alt="" srcset="">
+                        <span id="c9">PERI PERI CHICKEN</span>
+                    </div>
+                    <div class="topping" title="5TND">
+                        <img src="thumbnails/Barbeque.png" alt="" srcset="">
+                        <span id="c10">BARBEQUE</span>
+                    </div>
+                    <div class="topping" title="3TND">
+                        <img src="thumbnails/ChickenSausage.png" alt="" srcset="">
+                        <span id="c11">SAUSAGE</span>
+                    </div>
+                    <div class="topping" title="7TND">
+                        <img src="thumbnails/ChickenTikka.png" alt="" srcset="">
+                        <span id="c12">CHICKEN TIKKA</span>
+                    </div>
+                    <div class="topping" title="TND">
+                        <img src="thumbnails/GrilledChickenRasher.png" alt="" srcset="">
+                        <span id="c13">GRILLED CHICKEN RASHER</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid-child crust-container">
+            <img id="t1" src="images/photo livraison.png">
+            
+        </div>
+        
+        <div class="grid-child bill-container">
+            <div class="bill-extras">
+                <span>Quantity</span>
+                <select name="quantity" id="quantity" >
+                 <option value=1 selected disabled hidden>QUANTITY</option>
+
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+                <label for="extra-cheese" class="cheese" title="TND15">Extra Cheese
+                    <input type="checkbox" name="extra-cheese" id="extra-cheese" >
+                    <span class="checkmark" title="15TND"></span>
+                </label>
+            </div>
+            <div class="bill">
+                <ul class="bill-list">
+                    <li class="total">
+                        <span class="bill-label">Total:</span>
+                        <span class="bill-value" id="total-cost">0TND</span>
+                    </li>
+                    <li class='extra-topping'>
+                        <span class="bill-label">Extra Toppings:</span>
+                        <span class="bill-value" id="toppings-cost"><p>0</p></span>
+                    </li>
+                    <li class="extra-cheese">
+                        <span class="bill-label">Extra Cheese:</span>
+                        <span class="bill-value" id="cheese-cost">0TND </span>
+                    </li>
+                   
+                    <li id="grand-total">
+                        <span class="bill-label">Grand Total:</span>
+                        <span class="bill-value" id="grand-cost">0 TND</span>
+                    </li>
+                </ul>
+                <div onclick="addtocart()" id="buy-now">
+                    <a><span>Buy Now</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+<footer>
+  <p>Designed by ====> Mahdi-Nasri & Adam-Saafy &copy;<br></p>
+</footer>
+</html>
