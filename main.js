@@ -1,3 +1,29 @@
+var array = [];
+
+// alert when buy button is clicked
+
+function addtocart() {
+  swal("ARE YOU SURE YOU WANT THIS ? " + array, {
+    buttons: ["Confirmed", "Not confirmed"],
+  });
+}
+
+
+// calculate function
+
+function calculate(topF, totalToppingsF, totalF) {
+  $(".total").empty();
+  $(".total").append(`<span class="bill-label">Total:</span>
+                        <span class="bill-value" id="total-cost">${topF}</span>`);
+  $(".extra-topping").empty();
+  $(".extra-topping").append(`<span class="bill-label">Total:</span>
+                        <span class="bill-value" id="total-cost">${totalToppingsF}</span>`);
+  $("#grand-total").empty();
+  $("#grand-total").append(`<span class="bill-label">Grand Total:</span>
+                        <span class="bill-value" id="grand-cost">${totalF} TND</span>`);
+}
+$(document).ready(function() {
+var extracheese=0
 var totalToppings = 0;
 var top = 10;
 var total = 0;
@@ -174,7 +200,9 @@ $("#quantity").on("click ", function () {
     $("#grand-total").append(`<span class="bill-label">Grand Total:</span>
       <span class="bill-value" id="grand-cost">${total} TND</span>`);
   }
-});
+})
+})
+
 
 
 // add topping toggle after 1s
